@@ -17,4 +17,11 @@ describe MoviesController do
 			#put :update, {params}
 		end
 	end
+
+	describe 'similar' do
+		it 'sould call a RESTFUL route' do
+			get :similar, {:id => '1'}
+		end
+	end
+
 end
