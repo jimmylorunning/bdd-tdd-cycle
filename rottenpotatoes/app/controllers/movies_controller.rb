@@ -1,6 +1,10 @@
 class MoviesController < ApplicationController
 
   def similar
+#    m = Movie.find(params[:id])
+#    @director = m.director
+    @id = params[:id]
+    @similar_movies = Movie.movies_with_same_director(@id)
   end
 
   def show
@@ -19,11 +23,11 @@ class MoviesController < ApplicationController
     end
     @all_ratings = Movie.all_ratings
     @selected_ratings = params[:ratings] || session[:ratings] || {}
-    
+
     if @selected_ratings == {}
       @selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
     end
-    
+
     if params[:sort] != session[:sort]
       session[:sort] = sort
       flash.keep

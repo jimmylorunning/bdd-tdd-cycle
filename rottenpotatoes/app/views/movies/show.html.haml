@@ -7,7 +7,8 @@
     Rating:
     = @movie.rating
   %li
-    Director: Ridley Scott
+    Director:
+    = @movie.director
   %li
     Released on:
     = @movie.release_date.strftime("%B %d, %Y")
