@@ -8,9 +8,8 @@ class Movie < ActiveRecord::Base
 
   def self.movies_with_same_director(movie_id)
   	current = self.find(movie_id)
+  	return nil if (current.director.nil? || current.director.empty?)
   	self.find_all_by_director(current.director, :conditions => "id != #{current.id}")
-#  	current_movie = Movie.find(movie_id)
-#  	current_movie.director
   end
 end
 

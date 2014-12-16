@@ -1276,3 +1276,514 @@ Completed 200 OK in 1.3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
   [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Lucas' AND (id != 1)[0m
   [1m[35m (0.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 67.9ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1.3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (9.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Kiarostami' AND (id != 6)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:57:15 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 00:57:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Lucas' AND (id != 1)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 68.1ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (9.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Kiarostami' AND (id != 6)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" IS NULL AND (id != 7)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 00:59:47 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 00:59:47 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Lucas' AND (id != 1)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 68.5ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (9.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:00:44 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:00:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Kiarostami' AND (id != 6)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:30 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:01:30 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Lucas' AND (id != 1)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 16.9ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 67.2ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (9.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Kiarostami' AND (id != 6)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Lucas' AND (id != 1)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:01:55 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:01:55 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 66.8ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Lucas' AND (id != 1)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 1], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "One"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 2], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Two"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 3], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Three"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Scott"], ["id", 4], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Four"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Lucas"], ["id", 5], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Five"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", "Kiarostami"], ["id", 6], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Six"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "id", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00], ["description", nil], ["director", nil], ["id", 7], ["rating", "PG"], ["release_date", Thu, 16 Dec 2004 01:02:20 UTC +00:00], ["title", "Seven"], ["updated_at", Tue, 16 Dec 2014 01:02:20 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Kiarostami' AND (id != 6)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction

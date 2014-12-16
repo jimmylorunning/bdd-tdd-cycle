@@ -19,6 +19,7 @@ describe Movie do
 				@m4 = FactoryGirl.create(:movie, :id => 4, :title => 'Four', :director => 'Scott')
 				@m5 = FactoryGirl.create(:movie, :id => 5, :title => 'Five', :director => 'Lucas')
 				@m6 = FactoryGirl.create(:movie, :id => 6, :title => 'Six', :director => 'Kiarostami')
+				@m7 = FactoryGirl.create(:movie, :id => 7, :title => 'Seven')
 			end
 
 			it "should return empty array if no other movies in the db have the same director" do
@@ -28,6 +29,11 @@ describe Movie do
 			it "should return collection of movies with the same director" do
 				Movie.movies_with_same_director(@m1.id).should == [@m2, @m5]
 			end
+
+			it "should return nil if current movie has no director information" do
+				Movie.movies_with_same_director(@m7.id).should == nil
+			end
+
 		end
 
 	end
