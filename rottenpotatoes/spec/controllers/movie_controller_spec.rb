@@ -21,7 +21,7 @@ describe MoviesController do
 			fake_movies = [double("Blade Runner"), double("Prometheus")]
 			Movie.should_receive(:movies_with_same_director).with('1').and_return(fake_movies)
 			get :similar, {:id => '1'}
-			assigns(:similar_movies).should == fake_movies
+			assigns(:movies).should == fake_movies
 		end
 
 	end
