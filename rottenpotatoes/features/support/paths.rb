@@ -28,6 +28,8 @@ module NavigationHelpers
       movie_path(Movie.find_by_title($1))
     when /^the Similar Movies page for "(.*)"$/i
       similar_path(Movie.find_by_title($1))
+    when /^the RottenPotatoes home page$/i
+      movies_path
     else
       begin
         page_name =~ /^the (.*) page$/
