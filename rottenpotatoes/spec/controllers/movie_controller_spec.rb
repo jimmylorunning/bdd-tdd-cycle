@@ -13,6 +13,7 @@ describe MoviesController do
 
 		it "should grab the id of the movie" do
 			Movie.stub(:movies_with_same_director)
+			Movie.stub(:find)
 			get :similar, {:id => '1'}
 			assigns(:id).should == '1'
 		end

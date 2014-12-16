@@ -1,11 +1,13 @@
 class MoviesController < ApplicationController
 
   def similar
-#    m = Movie.find(params[:id])
-#    @director = m.director
     @id = params[:id]
     @movies = Movie.movies_with_same_director(@id)
-#    render 'index'
+    if @movies.nil?
+      currentmovie = Movie.find(@id)
+      flash[:notice] = "'#{currentmovie.title}' has no director info" if currentmovie
+      redirect_to root_path
+    end
   end
 
   def show
